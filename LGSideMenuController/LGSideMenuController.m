@@ -343,7 +343,7 @@
 
 - (BOOL)shouldAutorotate
 {
-    return (kLGSideMenuIsMenuShowing ? _currentShouldAutorotate : (_rootVC ? _rootVC.shouldAutorotate : YES));
+    return (_rootVC ? _rootVC.shouldAutorotate : (kLGSideMenuIsMenuShowing ? _currentShouldAutorotate : YES));
 }
 
 - (BOOL)prefersStatusBarHidden
